@@ -1,5 +1,4 @@
-ESP32 IoT Sensor Hub with MQTT Control
-A comprehensive IoT project using ESP32 to monitor environmental sensors and control LEDs remotely via MQTT protocol.
+A comprehensive IoT project using ESP32 to monitor environmental sensors and control LEDs remotely via MQTT protocol. 
 🎯 OVERVIEW
 This project demonstrates a complete IoT solution where an ESP32 microcontroller:
 ->Reads data from ultrasonic distance sensor (HC-SR04)
