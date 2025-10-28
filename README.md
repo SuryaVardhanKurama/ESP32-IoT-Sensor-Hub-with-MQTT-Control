@@ -37,3 +37,47 @@ All topics are organized under the main topic prefix: mqtt-demo/
 3.mqtt-demo/led1 — (Subscribe) Used by ESP32 to receive control commands for the Red LED. Accepts commands like "on" or "off".
 
 4.mqtt-demo/led2 — (Subscribe) Used by ESP32 to receive control commands for the Green LED. Accepts commands like "on" or "off".
+
+📡 MQTT BROKER COMMANDS
+Broker Information
+
+Broker: test.mosquitto.org
+Port: 1883
+Protocol: MQTT v3.1.1
+Authentication: None required
+
+PUBLISHING COMMANDS
+
+Control Red LED (LED1):
+bash# Turn ON
+mosquitto_pub -h test.mosquitto.org -t mqtt-demo/led1 -m "on"
+
+# Turn OFF
+mosquitto_pub -h test.mosquitto.org -t mqtt-demo/led1 -m "off"
+
+Control Green LED (LED2):
+bash# Turn ON
+mosquitto_pub -h test.mosquitto.org -t mqtt-demo/led2 -m "on"
+
+# Turn OFF
+mosquitto_pub -h test.mosquitto.org -t mqtt-demo/led2 -m "off"
+
+Turn All LEDs ON:
+bashmosquitto_pub -h test.mosquitto.org -t mqtt-demo/led1 -m "on"
+mosquitto_pub -h test.mosquitto.org -t mqtt-demo/led2 -m "on"
+
+Turn All LEDs OFF:
+bashmosquitto_pub -h test.mosquitto.org -t mqtt-demo/led1 -m "off"
+mosquitto_pub -h test.mosquitto.org -t mqtt-demo/led2 -m "off"
+
+SUNSCRIBING TO TOPICS
+
+Subscribe to specific sensor:
+bashmosquitto_sub -h test.mosquitto.org -t mqtt-demo/ultrasonic -v
+mosquitto_sub -h test.mosquitto.org -t mqtt-demo/light -v
+
+Subscribe to all topics:
+bashmosquitto_sub -h test.mosquitto.org -t mqtt-demo/# -v
+
+Subscribe with QoS:
+bashmosquitto_sub -h test.mosquitto.org -t mqtt-demo/# -q 1 -v
