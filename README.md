@@ -16,15 +16,25 @@ This project demonstrates a complete IoT solution where an ESP32 microcontroller
 
 # HARDWARE COMPONENTS
 
-1.ESP32 DevKit C V4 (x1) → Acts as the main microcontroller responsible for reading sensor data, controlling LEDs, and communicating with the MQTT broker.
+1.ESP32 DevKit C V4 (x1)
 
-2.HC-SR04 Ultrasonic Sensor (x1) → Connected to TRIG pin 25 and ECHO pin 26. Used to measure distance in the range of 2 cm to 400 cm.
+→ Acts as the main microcontroller responsible for reading sensor data, controlling LEDs, and communicating with the MQTT broker.
 
-3.LDR (Photoresistor) Sensor (x1) → Connected to analog pin 34 (ADC input). Detects surrounding light intensity and provides an analog voltage output.
+2.HC-SR04 Ultrasonic Sensor (x1)
 
-4.Red LED (x1) → Connected to Anode pin 23, Cathode to GND. Used as Status Indicator 1 (e.g., system alerts or threshold triggers).
+→ Connected to TRIG pin 25 and ECHO pin 26. Used to measure distance in the range of 2 cm to 400 cm.
 
-5.Green LED (x1) → Connected to Anode pin 22, Cathode to GND. Used as Status Indicator 2 (e.g., successful connection or operation status).
+3.LDR (Photoresistor) Sensor (x1)
+
+→ Connected to analog pin 34 (ADC input). Detects surrounding light intensity and provides an analog voltage output.
+
+4.Red LED (x1)
+
+→ Connected to Anode pin 23, Cathode to GND. Used as Status Indicator 1 (e.g., system alerts or threshold triggers).
+
+5.Green LED (x1)
+
+→ Connected to Anode pin 22, Cathode to GND. Used as Status Indicator 2 (e.g., successful connection or operation status).
 
 # MQTT TOPIC TREE
 
